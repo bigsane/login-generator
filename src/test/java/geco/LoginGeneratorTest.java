@@ -18,4 +18,8 @@ public class LoginGeneratorTest {
         String login = loginGenerator.generateLoginForNomAndPrenom("Durand","Paul");
         assertEquals("PDUR",login);
     }
+    public void generateLoginForJRAL2(){
+        String login = loginGenerator.generateLoginForNomAndPrenom("Ralling","John");
+        assertEquals("JRAL2",login);
+    }
 }
