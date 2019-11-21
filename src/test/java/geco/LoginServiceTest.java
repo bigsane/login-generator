@@ -36,6 +36,7 @@ public class LoginServiceTest {
         String pref = "te";
         assertTrue(loginService.findAllLoginsStartingWith(pref).size()==1);
         assertTrue(emptyloginService.findAllLoginsStartingWith(pref).size()==0);
+
     }
 
     @Test
