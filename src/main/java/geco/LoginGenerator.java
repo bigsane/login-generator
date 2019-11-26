@@ -39,10 +39,10 @@ public class LoginGenerator {
         String p = deAccent(prenom.substring(0,1).toUpperCase());
         String n = deAccent(nom.substring(0,3).toUpperCase());
         String login = p+n ;
-        if (loginService.loginExists(login)) {
+        if(loginService.loginExists(login)){
             List<String> all = loginService.findAllLoginsStartingWith(login);
-            int i = all.size();
-            login = login + i ;
+            int idx = all.size();
+            login = login + idx;
         }
         loginService.addLogin(login);
         return login;
@@ -59,10 +59,4 @@ public class LoginGenerator {
         Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
         return pattern.matcher(nfdNormalizedString).replaceAll("");
     }
-
-
-
-
-
-
 }

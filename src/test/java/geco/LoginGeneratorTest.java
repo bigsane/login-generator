@@ -18,10 +18,12 @@ public class LoginGeneratorTest {
         String login = loginGenerator.generateLoginForNomAndPrenom("Durand","Paul");
         assertEquals("PDUR",login);
     }
+    @Test
     public void generateLoginForJRAL2(){
         String login = loginGenerator.generateLoginForNomAndPrenom("Ralling","John");
         assertEquals("JRAL2",login);
     }
+    @Test
     public void CT2() {
         String s = loginGenerator.generateLoginForNomAndPrenom("Rolling","Jean");
         assertEquals("JROL1",s);
